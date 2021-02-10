@@ -1,5 +1,7 @@
 export default {
-    components: true,
+    target: 'static',
+  mode: 'universal',
+  components: true,
     head: {
         titleTemplate: "Mastering Nuxt: %s",
         htmlAttrs: {
@@ -25,6 +27,9 @@ export default {
             limit: 0,
         }
     },
+  generate: {
+    fallback: true
+  },
     publicRuntimeConfig:{
     },
     privateRuntimeConfig:{
